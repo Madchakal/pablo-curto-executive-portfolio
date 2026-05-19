@@ -1,0 +1,184 @@
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+import { Mail, MapPin, Briefcase } from "lucide-react";
+import { motion } from "framer-motion";
+
+export default function Hero() {
+  const stack = ["Java", "Spring Boot", "PostgreSQL", "Microservices", "AWS", "Docker", "Kubernetes", "Agile"];
+
+  return (
+    <section id="about" className="relative min-h-screen flex flex-col justify-center pt-20 pb-20 overflow-hidden">
+
+      {/* ── Decorative code watermark ── */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden opacity-[0.04]">
+        <pre className="absolute top-0 right-0 text-[11px] font-mono text-cyan-300 leading-6 p-8 text-right whitespace-pre">
+{`const pablo = {
+  role: "Technical Leader",
+  focus: "Backend & Architecture",
+  experience: "20+ years",
+  impact: () => buildScalableSystems(),
+  leadership: teams => teams.map(empower),
+};
+
+export default pablo;`}
+        </pre>
+      </div>
+
+      {/* ── Multi-layer glow background ── */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2 }}
+        className="absolute top-1/3 right-1/4 w-[600px] h-[600px] bg-cyan-500/10 blur-[140px] rounded-full pointer-events-none"
+      />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 2, delay: 0.5 }}
+        className="absolute bottom-1/4 left-1/4 w-[400px] h-[400px] bg-blue-600/10 blur-[120px] rounded-full pointer-events-none"
+      />
+
+      <div className="relative max-w-7xl mx-auto px-6 w-full">
+
+        {/* ── HELLO greeting – full width, centered ── */}
+        <motion.div
+          initial={{ opacity: 0, y: -16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="text-center mb-14"
+        >
+          <p className="text-4xl md:text-5xl lg:text-6xl font-light text-slate-400 tracking-[0.2em] uppercase">
+            Hello, I&apos;m <span className="text-cyan-400 font-normal">Pablo.</span>
+          </p>
+        </motion.div>
+
+        {/* ── Main split layout ── */}
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+
+          {/* LEFT – Text block */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+            className="flex-1 text-center lg:text-left"
+          >
+            {/* Status badge */}
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-sm mb-8 font-medium backdrop-blur-sm">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+              Available for new opportunities
+            </div>
+
+            {/* Headline */}
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white italic leading-[1.15] mb-6 tracking-tight">
+              Building scalable platforms{" "}
+              <span className="not-italic font-normal text-slate-400">&amp;</span>{" "}
+              leading high-performance engineering teams.
+            </h1>
+
+            {/* Description */}
+            <p className="text-base md:text-lg text-slate-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+              I am a Technical Leader and Senior Backend Engineer focused on empowering high-performance teams.
+              I bridge the gap between product vision and flawless execution, guiding squads to build clean,
+              scalable architectures and deliver top-tier digital experiences.
+            </p>
+
+
+
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
+              <a 
+                href="https://wa.me/541153852413" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full bg-white text-slate-950 px-8 font-semibold text-sm transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)]"
+              >
+                Start a Conversation
+              </a>
+              <Link
+                href="#projects"
+                className="w-full sm:w-auto inline-flex h-12 items-center justify-center rounded-full border border-slate-700 text-white px-8 font-semibold text-sm transition-all duration-300 hover:border-cyan-500/60 hover:bg-cyan-500/5"
+              >
+                View Experience
+              </Link>
+            </div>
+
+            {/* Tech stack pills */}
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
+              {stack.map((tech) => (
+                <span
+                  key={tech}
+                  className="px-3 py-1 text-xs font-medium text-slate-400 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500/40 hover:text-cyan-400 transition-colors duration-200"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            {/* Social links */}
+            <div className="mt-10 flex items-center justify-center lg:justify-start gap-5 text-slate-600">
+              <a href="https://www.linkedin.com/in/pablo-curto-04b48031" target="_blank" rel="noopener noreferrer" className="hover:text-slate-300 transition-colors duration-200" aria-label="LinkedIn">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+              </a>
+              <a href="mailto:pablo.daniel.curto@gmail.com" className="hover:text-slate-300 transition-colors duration-200" aria-label="Email">
+                <Mail className="w-5 h-5" />
+              </a>
+            </div>
+          </motion.div>
+
+          {/* RIGHT – Profile image with floating badges */}
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+            className="flex-1 w-full max-w-sm lg:max-w-md mx-auto relative"
+          >
+            {/* Glowing border ring */}
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-cyan-500/30 via-blue-600/10 to-transparent blur-md" />
+
+            {/* Photo card */}
+            <div className="relative rounded-3xl overflow-hidden border border-slate-700/60 shadow-[0_0_60px_-10px_rgba(6,182,212,0.2)] aspect-[3/4]">
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent z-10" />
+              <Image
+                src="/profile-neon.jpg"
+                alt="Pablo Curto"
+                fill
+                className="object-cover object-[50%_30%] hover:scale-105 transition-transform duration-700"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                priority
+              />
+
+
+            </div>
+
+            {/* Floating badge – Years of exp */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="absolute -left-8 top-10 bg-slate-900/90 backdrop-blur-md border border-slate-700/60 rounded-2xl p-3 shadow-xl"
+            >
+              <p className="text-2xl font-bold text-white">20+</p>
+              <p className="text-xs text-slate-400 mt-0.5">Years of<br />Experience</p>
+            </motion.div>
+
+            {/* Floating badge – Projects */}
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="absolute -right-8 top-1/3 bg-slate-900/90 backdrop-blur-md border border-cyan-500/20 rounded-2xl p-3 shadow-xl"
+            >
+              <p className="text-2xl font-bold text-cyan-400">5+</p>
+              <p className="text-xs text-slate-400 mt-0.5">Companies<br />Led</p>
+            </motion.div>
+          </motion.div>
+
+        </div>
+      </div>
+    </section>
+  );
+}
