@@ -6,8 +6,6 @@ import { Mail, MapPin, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Hero() {
-  const stack = ["Java", "Spring Boot", "PostgreSQL", "Microservices", "AWS", "Docker", "Kubernetes", "Agile"];
-
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center pt-20 pb-20 overflow-hidden">
 
@@ -104,16 +102,161 @@ export default pablo;`}
               </Link>
             </div>
 
-            {/* Tech stack pills */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2">
-              {stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 text-xs font-medium text-slate-400 bg-slate-900 border border-slate-800 rounded-full hover:border-cyan-500/40 hover:text-cyan-400 transition-colors duration-200"
-                >
-                  {tech}
-                </span>
-              ))}
+            {/* Tech stack honeycomb hexagons */}
+            <div className="flex flex-col gap-0 items-center lg:items-start select-none py-4">
+              {/* Row 1 (5 items) */}
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.06
+                    }
+                  }
+                }}
+                initial="hidden"
+                animate="show"
+                className="flex gap-3 justify-center lg:justify-start"
+              >
+                {[
+                  { src: "/logos/b59d3d29f8689323df06d0e9adbff57c.png", alt: "Java", customClass: "scale-[1.25] md:scale-[1.3] group-hover:scale-[1.4] md:group-hover:scale-[1.45]" },
+                  { src: "/logos/Spring_Boot.svg.png", alt: "Spring Boot", customClass: "scale-[0.85] md:scale-[0.9] group-hover:scale-[1.0] md:group-hover:scale-[1.05]" },
+                  { src: "/logos/images-removebg-preview.png", alt: "PostgreSQL" },
+                  { src: "/logos/MongoDB_Logo.svg.png", alt: "MongoDB", customClass: "scale-[1.15] md:scale-[1.2] group-hover:scale-[1.3] md:group-hover:scale-[1.35]" },
+                  { src: "/logos/Redis-Logo.wine.png", alt: "Redis", customClass: "scale-[1.2] md:scale-[1.25] group-hover:scale-[1.35] md:group-hover:scale-[1.4]" }
+                ].map((logo, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.6, y: 15 },
+                      show: { 
+                        opacity: 1, 
+                        scale: 1, 
+                        y: 0,
+                        transition: { type: "spring", stiffness: 120, damping: 14 }
+                      }
+                    }}
+                    className="group relative w-20 h-20 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300"
+                    style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                  >
+                    <div 
+                      className="w-full h-full bg-white scale-95 flex items-center justify-center hover:bg-slate-50 transition-colors duration-300"
+                      style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                    >
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        title={logo.alt}
+                        className={`w-14 h-14 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* Row 2 (4 items) - Staggered Offset */}
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.06,
+                      delayChildren: 0.30
+                    }
+                  }
+                }}
+                initial="hidden"
+                animate="show"
+                className="flex gap-3 justify-center lg:justify-start ml-[46px] md:ml-[54px] -mt-[18px] md:-mt-[22px]"
+              >
+                {[
+                  { src: "/logos/kafka_new.png", alt: "Kafka" },
+                  { src: "/logos/docker_new.png", alt: "Docker" },
+                  { src: "/logos/git_new.png", alt: "Git" },
+                  { src: "/logos/github.png", alt: "GitHub" }
+                ].map((logo, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.6, y: 15 },
+                      show: { 
+                        opacity: 1, 
+                        scale: 1, 
+                        y: 0,
+                        transition: { type: "spring", stiffness: 120, damping: 14 }
+                      }
+                    }}
+                    className="group relative w-20 h-20 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300"
+                    style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                  >
+                    <div 
+                      className="w-full h-full bg-white scale-95 flex items-center justify-center hover:bg-slate-50 transition-colors duration-300"
+                      style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                    >
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        title={logo.alt}
+                        className={`w-14 h-14 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
+
+              {/* Row 3 (4 items) - No Staggered Offset, Nested Vertical Offset */}
+              <motion.div 
+                variants={{
+                  hidden: { opacity: 0 },
+                  show: {
+                    opacity: 1,
+                    transition: {
+                      staggerChildren: 0.06,
+                      delayChildren: 0.54
+                    }
+                  }
+                }}
+                initial="hidden"
+                animate="show"
+                className="flex gap-3 justify-center lg:justify-start -mt-[18px] md:-mt-[22px]"
+              >
+                {[
+                  { src: "/logos/jira_new.png", alt: "Jira" },
+                  { src: "/logos/python_new.png", alt: "Python" },
+                  { src: "/logos/dynatrace.png", alt: "Dynatrace" },
+                  { src: "/logos/grafana.png", alt: "Grafana" },
+                  { src: "/logos/oracle.png", alt: "Oracle Database" }
+                ].map((logo, idx) => (
+                  <motion.div
+                    key={idx}
+                    variants={{
+                      hidden: { opacity: 0, scale: 0.6, y: 15 },
+                      show: { 
+                        opacity: 1, 
+                        scale: 1, 
+                        y: 0,
+                        transition: { type: "spring", stiffness: 120, damping: 14 }
+                      }
+                    }}
+                    className="group relative w-20 h-20 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300"
+                    style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                  >
+                    <div 
+                      className="w-full h-full bg-white scale-95 flex items-center justify-center hover:bg-slate-50 transition-colors duration-300"
+                      style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
+                    >
+                      <img
+                        src={logo.src}
+                        alt={logo.alt}
+                        title={logo.alt}
+                        className={`w-14 h-14 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
+                      />
+                    </div>
+                  </motion.div>
+                ))}
+              </motion.div>
             </div>
 
             {/* Social links */}
