@@ -5,6 +5,12 @@ import Image from "next/image";
 import { Mail, MapPin, Briefcase } from "lucide-react";
 import { motion } from "framer-motion";
 
+interface TechLogo {
+  src: string;
+  alt: string;
+  customClass?: string;
+}
+
 export default function Hero() {
   return (
     <section id="about" className="relative min-h-screen flex flex-col justify-center pt-20 pb-20 overflow-hidden">
@@ -119,13 +125,13 @@ export default pablo;`}
                 animate="show"
                 className="flex gap-3 justify-center lg:justify-start"
               >
-                {[
+                {([
                   { src: "/logos/b59d3d29f8689323df06d0e9adbff57c.png", alt: "Java", customClass: "scale-[1.25] md:scale-[1.3] group-hover:scale-[1.4] md:group-hover:scale-[1.45]" },
                   { src: "/logos/Spring_Boot.svg.png", alt: "Spring Boot", customClass: "scale-[0.85] md:scale-[0.9] group-hover:scale-[1.0] md:group-hover:scale-[1.05]" },
                   { src: "/logos/images-removebg-preview.png", alt: "PostgreSQL" },
                   { src: "/logos/MongoDB_Logo.svg.png", alt: "MongoDB", customClass: "scale-[1.15] md:scale-[1.2] group-hover:scale-[1.3] md:group-hover:scale-[1.35]" },
                   { src: "/logos/Redis-Logo.wine.png", alt: "Redis", customClass: "scale-[1.2] md:scale-[1.25] group-hover:scale-[1.35] md:group-hover:scale-[1.4]" }
-                ].map((logo, idx) => (
+                ] as TechLogo[]).map((logo, idx) => (
                   <motion.div
                     key={idx}
                     variants={{
@@ -152,7 +158,7 @@ export default pablo;`}
                       />
                     </div>
                   </motion.div>
-                ))}
+                ))  }
               </motion.div>
 
               {/* Row 2 (4 items) - Staggered Offset */}
@@ -171,12 +177,12 @@ export default pablo;`}
                 animate="show"
                 className="flex gap-3 justify-center lg:justify-start ml-[46px] md:ml-[54px] -mt-[18px] md:-mt-[22px]"
               >
-                {[
+                {([
                   { src: "/logos/kafka_new.png", alt: "Kafka" },
                   { src: "/logos/docker_new.png", alt: "Docker" },
                   { src: "/logos/git_new.png", alt: "Git" },
                   { src: "/logos/github.png", alt: "GitHub" }
-                ].map((logo, idx) => (
+                ] as TechLogo[]).map((logo, idx) => (
                   <motion.div
                     key={idx}
                     variants={{
@@ -203,7 +209,7 @@ export default pablo;`}
                       />
                     </div>
                   </motion.div>
-                ))}
+                ))  }
               </motion.div>
 
               {/* Row 3 (4 items) - No Staggered Offset, Nested Vertical Offset */}
@@ -222,13 +228,13 @@ export default pablo;`}
                 animate="show"
                 className="flex gap-3 justify-center lg:justify-start -mt-[18px] md:-mt-[22px]"
               >
-                {[
+                {([
                   { src: "/logos/jira_new.png", alt: "Jira" },
                   { src: "/logos/python_new.png", alt: "Python" },
                   { src: "/logos/dynatrace.png", alt: "Dynatrace" },
                   { src: "/logos/grafana.png", alt: "Grafana" },
                   { src: "/logos/oracle.png", alt: "Oracle Database" }
-                ].map((logo, idx) => (
+                ] as TechLogo[]).map((logo, idx) => (
                   <motion.div
                     key={idx}
                     variants={{
@@ -255,7 +261,7 @@ export default pablo;`}
                       />
                     </div>
                   </motion.div>
-                ))}
+                ))  }
               </motion.div>
             </div>
 
