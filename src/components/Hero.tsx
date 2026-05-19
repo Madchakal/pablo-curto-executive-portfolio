@@ -277,10 +277,10 @@ export default pablo;`}
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
-            className="flex-1 w-full max-w-sm lg:max-w-md mx-auto relative"
+            className="flex-1 w-full max-w-sm lg:max-w-md mx-auto relative group"
           >
             {/* Glowing border ring */}
-            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-cyan-500/30 via-blue-600/10 to-transparent blur-md" />
+            <div className="absolute -inset-1 rounded-3xl bg-gradient-to-br from-cyan-500/30 via-blue-600/10 to-transparent blur-md group-hover:from-cyan-500/40 transition-all duration-1000" />
 
             {/* Photo card */}
             <div className="relative rounded-3xl overflow-hidden border border-slate-700/60 shadow-[0_0_60px_-10px_rgba(6,182,212,0.2)] aspect-[3/4]">
@@ -289,12 +289,10 @@ export default pablo;`}
                 src="/profile-neon.jpg"
                 alt="Pablo Curto"
                 fill
-                className="object-cover object-[50%_30%] hover:scale-105 transition-transform duration-700"
+                className="object-cover object-[50%_30%] scale-100 group-hover:scale-[1.03] transition-transform duration-1000 ease-out"
                 sizes="(max-width: 768px) 100vw, 50vw"
                 priority
               />
-
-
             </div>
 
             {/* Floating badge – Years of exp */}
@@ -304,7 +302,7 @@ export default pablo;`}
               transition={{ delay: 0.8, duration: 0.5 }}
               className="absolute -left-8 top-10 bg-slate-900/90 backdrop-blur-md border border-slate-700/60 rounded-2xl p-3 shadow-xl"
             >
-              <p className="text-2xl font-bold text-white">20+</p>
+              <p className="text-2xl font-bold text-cyan-400">20+</p>
               <p className="text-xs text-slate-400 mt-0.5">Years of<br />Experience</p>
             </motion.div>
 
