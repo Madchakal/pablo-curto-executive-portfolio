@@ -123,7 +123,7 @@ export default pablo;`}
                 }}
                 initial="hidden"
                 animate="show"
-                className="flex gap-3 justify-center lg:justify-start"
+                className="flex gap-2 md:gap-3 justify-center lg:justify-start"
               >
                 {([
                   { src: "/logos/b59d3d29f8689323df06d0e9adbff57c.png", alt: "Java", customClass: "scale-[1.25] md:scale-[1.3] group-hover:scale-[1.4] md:group-hover:scale-[1.45]" },
@@ -143,7 +143,7 @@ export default pablo;`}
                         transition: { type: "spring", stiffness: 120, damping: 14 }
                       }
                     }}
-                    className="group relative w-20 h-20 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300"
+                    className="group relative w-16 h-16 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300 flex-shrink-0"
                     style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                   >
                     <div 
@@ -154,7 +154,7 @@ export default pablo;`}
                         src={logo.src}
                         alt={logo.alt}
                         title={logo.alt}
-                        className={`w-14 h-14 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
+                        className={`w-10 h-10 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
                       />
                     </div>
                   </motion.div>
@@ -175,7 +175,7 @@ export default pablo;`}
                 }}
                 initial="hidden"
                 animate="show"
-                className="flex gap-3 justify-center lg:justify-start ml-[46px] md:ml-[54px] -mt-[18px] md:-mt-[22px]"
+                className="flex gap-2 md:gap-3 justify-center lg:justify-start ml-[36px] md:ml-[54px] -mt-[14px] md:-mt-[22px]"
               >
                 {([
                   { src: "/logos/kafka_new.png", alt: "Kafka" },
@@ -194,7 +194,7 @@ export default pablo;`}
                         transition: { type: "spring", stiffness: 120, damping: 14 }
                       }
                     }}
-                    className="group relative w-20 h-20 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300"
+                    className="group relative w-16 h-16 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300 flex-shrink-0"
                     style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                   >
                     <div 
@@ -205,7 +205,7 @@ export default pablo;`}
                         src={logo.src}
                         alt={logo.alt}
                         title={logo.alt}
-                        className={`w-14 h-14 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
+                        className={`w-10 h-10 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
                       />
                     </div>
                   </motion.div>
@@ -226,7 +226,7 @@ export default pablo;`}
                 }}
                 initial="hidden"
                 animate="show"
-                className="flex gap-3 justify-center lg:justify-start -mt-[18px] md:-mt-[22px]"
+                className="flex gap-2 md:gap-3 justify-center lg:justify-start -mt-[14px] md:-mt-[22px]"
               >
                 {([
                   { src: "/logos/jira_new.png", alt: "Jira" },
@@ -246,7 +246,7 @@ export default pablo;`}
                         transition: { type: "spring", stiffness: 120, damping: 14 }
                       }
                     }}
-                    className="group relative w-20 h-20 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300"
+                    className="group relative w-16 h-16 md:w-24 md:h-24 bg-slate-800 hover:bg-cyan-500/80 transition-colors duration-300 flex-shrink-0"
                     style={{ clipPath: 'polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%)' }}
                   >
                     <div 
@@ -257,7 +257,7 @@ export default pablo;`}
                         src={logo.src}
                         alt={logo.alt}
                         title={logo.alt}
-                        className={`w-14 h-14 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
+                        className={`w-10 h-10 md:w-16 md:h-16 object-contain brightness-95 grayscale group-hover:grayscale-0 opacity-75 group-hover:opacity-100 transition-all duration-300 cursor-help ${logo.customClass || "group-hover:scale-110"}`}
                       />
                     </div>
                   </motion.div>
