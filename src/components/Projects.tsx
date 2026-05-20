@@ -44,7 +44,32 @@ export default function Projects() {
       role: "Software Engineer / Tech Lead & Squad Facilitator",
       duration: "Sep 2019 – May 2025",
       description: "Led a multidisciplinary team assuming dual responsibility for technical direction and Agile facilitation. Defined robust architecture guidelines using Spring Framework, PostgreSQL, and cloud ecosystems.",
-      tech: ["Agile Leadership", "Scrum", "Spring Boot", "PostgreSQL", "Cloud"],
+      tech: ["Agile Leadership", "Scrum", "Spring Boot", "Apache Kafka", "PostgreSQL", "Oracle DB", "DevOps"],
+      details: {
+        fullDescription: "Progressed through key engineering areas within the bank, culminating in a dual role as Technical Lead and Project Leader / Squad Facilitator. Acted as the bridge between technical execution and business strategy, managing architecture, delivery pipelines, and driving Agile methodologies for multidisciplinary teams.",
+        achievements: [
+          {
+            title: "Technical & Project Leadership (Messages & Notifications)",
+            desc: "Steered the team as Tech Lead and Project Leader through a complete core system re-engineering. Successfully modernized the platform by introducing Apache Kafka to handle event-driven architectures and high-throughput real-time messaging."
+          },
+          {
+            title: "Data Engineering & Compliance",
+            desc: "Led the technical strategy within the Data Engineering squad to architect and implement robust data sanitization pipelines, ensuring secure and compliant data transmission to Santander Spain."
+          },
+          {
+            title: "Product Innovation (Backoffice Builder)",
+            desc: "Directed the design and architecture of a custom Backoffice layout manager application, enabling internal teams to dynamically compose and preview multi-device push notifications and messages."
+          },
+          {
+            title: "Performance & DevOps Optimization",
+            desc: "Started as the Technical Reference for the Statistics and Rewards domain, optimizing high-volume Oracle batch processes. Collaborated closely with DevOps to build automated file-transfer pipelines interacting with legacy infrastructure."
+          },
+          {
+            title: "Agile Facilitation",
+            desc: "Facilitated Scrum and Kanban ceremonies (Dailies, Plannings, Retrospectives), effectively removing team blockers, optimizing sprint velocity, and mentoring engineers."
+          }
+        ]
+      }
     },
     {
       company: "Capgemini",
