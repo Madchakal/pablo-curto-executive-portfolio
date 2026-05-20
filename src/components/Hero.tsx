@@ -175,7 +175,7 @@ export default pablo;`}
                 }}
                 initial="hidden"
                 animate="show"
-                className="flex gap-2 md:gap-3 justify-center lg:justify-start ml-[36px] md:ml-[54px] -mt-[14px] md:-mt-[22px]"
+                className="flex gap-2 md:gap-3 justify-center lg:justify-start ml-0 lg:ml-[54px] -mt-[14px] md:-mt-[22px]"
               >
                 {([
                   { src: "/logos/kafka_new.png", alt: "Kafka" },
